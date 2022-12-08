@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+
+{% block body %}
+
+    <h1>Lista de Personajes</h1>
+    
+     
+    {% for valor in personajes %}
+     
+        <div class="col-md-2 offset-md-2">
+                <img class="card-img-top" src="{{valor.image}}" width="25%">
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{valor.name}}</h5>
+                        <p class="card-text text-success">Estado:{{valor.status}}</p>
+                        <p>Especie: {{valor.species}}</p>
+                        <p class="card-text text-sucess">Tipo:{{valor.type}}</p>
+                        <p class="card-text text-success">Genero:{{valor.gender}}</p>
+                    </div>
+                </div>
+            </div>
+
+    {% endfor %}
+   
+{% endblock  %}
+
